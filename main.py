@@ -1,7 +1,7 @@
 import wcag_contrast_ratio as contrast
 from colour import Color
 
-def get_colour_rgb(input_prompt):
+def get_colour(input_prompt):
     while True:
         col = input(input_prompt)
         try:
@@ -9,10 +9,9 @@ def get_colour_rgb(input_prompt):
             return col
         except:
             print('Invalid colour. Try again.')
-            pass 
 
-first_colour = get_colour_rgb('Enter first colour hex: ')
-second_colour = get_colour_rgb('Enter second colour hex: ')
+first_colour = get_colour('Enter first colour hex: ')
+second_colour = get_colour('Enter second colour hex: ')
 
 print('First colour:', first_colour.hex)
 print('Second colour:', second_colour.hex)
